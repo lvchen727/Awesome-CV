@@ -46,22 +46,25 @@
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
+\makeatletter
+\patchcmd{\@sectioncolor}{\color}{\mdseries\color}{}{}
+\makeatother
 
 %-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-% \photo{profile.png}
-\name{Chen}{Lu}
-\position{PhD in Chemistry{\enskip\cdotp\enskip}MS in Computer Science}
-\address{605 Leland Ave, St. Louis, MO, USA, 63130}
+% \photo[rectangle,edge,right]{profile}
+\name{Byungjin}{Park}
+\position{Software Engineer{\enskip\cdotp\enskip}Security Expert}
+\address{246-1002, Gwangmyeongmayrouge Apt. 86, Cheongna lime-ro, Seo-gu, Incheon-si, 404-180, Rep. of KOREA}
 
-\mobile{(+1) 314-402-8727}
-\email{lvchen727@gmail.com}
-\homepage{https://lvchen727.github.io/}
-\github{https://github.com/lvchen727}
-\linkedin{https://www.linkedin.com/in/chen-lu/}
+\mobile{(+82) 10-9030-1843}
+\email{posquit0.bj@gmail.com}
+\homepage{www.posquit0.com}
+\github{posquit0}
+\linkedin{posquit0}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
@@ -69,20 +72,21 @@
 % \reddit{reddit-id}
 % \extrainfo{extra informations}
 
-\quote{``Live as if you were to die tomorrow. Learn as if you were to live forever. -- Mahatma Gandhi"}
+\quote{``Be the change that you want to see in the world."}
+
 
 %-------------------------------------------------------------------------------
 \begin{document}
 
 % Print the header with above personal informations
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader
+\makecvheader[C]
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-  {Claud D. Park~~~·~~~Curriculum Vitae}
+  {Claud D. Park~~~·~~~Résumé}
   {\thepage}
 
 
@@ -91,12 +95,13 @@
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
 \input{resume/summary.tex}
-\input{cv/skills.tex}
-\input{cv/projects.tex}
-\input{cv/experience.tex}
-\input{cv/education.tex}
-\input{cv/publication.tex}
-
+\input{resume/experience.tex}
+\input{resume/honors.tex}
+\input{resume/presentation.tex}
+\input{resume/writing.tex}
+\input{resume/committees.tex}
+\input{resume/education.tex}
+\input{resume/extracurricular.tex}
 
 
 %-------------------------------------------------------------------------------
